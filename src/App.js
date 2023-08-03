@@ -19,10 +19,10 @@ function App() {
   return (
     <>
       <div className='container-fluid p-0 position-relative' style={{minHeight:'100vh'}}>
-        {location.pathname === `/` && <Header />}
+        {location.pathname === `/shopping-app` && <Header />}
         <Navigationbar/>
         <Routes>
-          <Route exact path='/' element={<Productlisting />}></Route>
+          <Route exact path='/shopping-app' element={<Productlisting />}></Route>
           <Route exact path='/addcart' element={<Protected_route Cmp={Addcart}/>}></Route>
           <Route  path='register' element={<Register />}></Route>
           <Route  path='login' element={<Login />}></Route>

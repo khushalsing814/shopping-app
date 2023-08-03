@@ -201,5 +201,8 @@ color:black;
   .button_style_2{
     width: 100px;
   }
+  .react-multi-carousel-item {
+    margin-right: 16px !important; 
+}
 }
 

@@ -62,7 +62,7 @@ function Productlisting() {
     const Handledata = (id) => {
         if (!localStorage.getItem(`usertoken`)) {
             toastwarning();
-            navigate('/')
+            navigate('/shopping-app')
         } else {
             navigate('/ProductDetails', { state: { userid: id } })
         }

@@ -22,7 +22,7 @@ function Navigationbar() {
         <>
                         <nav className="navbar navbar-expand-lg z-1">
                     <div className="container bg-dark navbar-dark bg-dark rounded py-1">
-                        <Link to="/" className="navbar-brand">Logo</Link>
+                        <Link to="/shopping-app" className="navbar-brand">Logo</Link>
                         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                             <span className="navbar-toggler-icon"></span>
                         </button>
