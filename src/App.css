@@ -1,0 +1,205 @@
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  background-color:#eff0f0 !important ;
+}
+span.react-read-more-read-less.react-read-more-read-less-more {
+  color: green;
+}
+
+span.react-read-more-read-less.react-read-more-read-less-less {
+  color: red;
+}
+
+.card-desc{
+  -webkit-box-orient: vertical;
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-line-clamp: 2;
+    text-align: start;
+}
+.card-desc.add{
+  -webkit-line-clamp: 2;
+}
+
+.parent-react-multi-carousel-list .react-multi-carousel-list{
+  margin-bottom: 200px !important;
+  margin-top: 14px !important;
+}
+
+.dashboard{
+  margin-top: 90px !important;
+  min-height: 200px !important;
+  max-height: 200px !important; 
+}
+
+.add--scrollbar{
+overflow: auto;
+padding: 34px !important;
+max-height: 100vh;
+}
+
+.center_form{
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  }
+
+  .form_shadow {
+    border-radius: 16px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,.2), 0 6px 20px 0 rgba(0,0,0,.19);
+    margin-bottom: 40px;
+    padding: 16px;
+  }
+
+nav.navbar{
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+
+}
+
+header.background_image_header{
+position: relative;
+min-height: 100vh;
+}
+
+.header_text{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font-size: 18px;
+  width: 100%;
+  padding: 0px 20px;
+}
+
+.parent_image{
+  height: 100%;
+width: 100% 
+}
+.parent_image>img {
+  min-height: 100vh !important;
+ width: 100% !important;
+}
+
+.card_shadow {
+  border-radius: 16px;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,.2), 0 6px 20px 0 rgba(0,0,0,.19);
+  margin-bottom: 40px;
+  padding: 16px;
+}
+
+.width_height{
+  max-width: 24rem !important;
+  max-height: 24rem !important;
+  min-height: 24rem !important;
+}
+.btnstyle{
+    color: black;
+    border-radius: 10px;
+    border: 1px solid black !important;
+    padding: 6px;
+    list-style: none;
+}
+
+.btnstyle.active {
+  background-color: black;
+  color: white;
+}
+
+.card-image--parent{
+  max-height: 250px !important;
+  height: 300px;
+}
+
+.card-image--parent>img {
+  max-width: 100%;
+  height: 100%;
+  width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.btnstyle:hover{
+  background-color: black !important;
+    color: white !important;
+}
+
+.nav-item.btnstyle .nav-link{
+  pointer-events: auto;
+  cursor: pointer;
+}
+
+.setcolor{
+text-decoration: none;
+color:black;
+opacity: 0.9;
+}
+
+.setcolor:hover{
+opacity: 1;
+color:black;
+}
+
+.image__parent>img {
+  max-width: 100%;
+  width: 100%;
+  height: 100%;
+  max-height: 100%;
+}
+.card_width{
+  width: 18rem;
+}
+
+.button_style{
+  width: 150px;
+  margin-right: 16px;
+}
+.button_style_2{
+  width: 150px;
+}
+
+@media (max-width: 992px){
+  .width_height{
+    max-width: none !important;
+    max-height: none !important;
+    min-height: auto !important;
+  }
+}
+@media (max-width: 768px){
+  .react-multi-carousel-item {
+    margin-right: 46px;
+}
+}
+@media (max-width: 465px){
+  .react-multi-carousel-item .react-multi-carousel-item--active  {
+    width: 430px !important;
+    margin-right: 14px !important;
+}
+}
+@media (max-width: 580px){
+  .card_width{
+    width: auto;
+    margin-right: 24px;
+  }
+}
+@media (max-width: 390px){
+  .button_style{
+    width: 100px;
+    margin-right: 16px;
+  }
+  .button_style_2{
+    width: 100px;
+  }
+}
+
