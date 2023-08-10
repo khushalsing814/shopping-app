@@ -38,7 +38,7 @@ function Navigationbar() {
                     <div className="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul className="navbar-nav me-auto mb-2 mb-lg-0 mx-auto">
                             <li className="nav-item">
-                                <a className="nav-link active" aria-current="page" href="#">Home</a>
+                                <a className="nav-link active" aria-current="page" href="/">Home</a>
                             </li>
                         </ul>
                         {
@@ -50,7 +50,7 @@ function Navigationbar() {
                                 :
                                 <div className='d-flex'>
                                     <span className='position-relative'>
-                                        <Link to="/addcart" className="btn btn-outline-dark me-2" type="submit">cart
+                                        <Link to="/addcart" className="btn btn-outline-light me-2" type="submit">cart
                                             <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
                                                 {cart.length}
                                                 <span className="visually-hidden">unread messages</span>
