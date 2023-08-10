@@ -28,7 +28,7 @@ function ProductDetails() {
 
     return (
         <>
-            <div key={productdetails.id} className='col-12'>
+            <div key={productdetails.id} className='col-12' style={{marginTop:90}}>
                 <div className='card_shadow'>
                     <div className='row'>
                         <div className='col-12 col-sm-3'>

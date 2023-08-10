@@ -38,7 +38,7 @@ function Navigationbar() {
                     <div className="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul className="navbar-nav me-auto mb-2 mb-lg-0 mx-auto">
                             <li className="nav-item">
-                                <a className="nav-link active" aria-current="page" href="/">Home</a>
+                                <Link className="nav-link active" aria-current="page" to="/shopping-app">Home</Link>
                             </li>
                         </ul>
                         {
@@ -62,7 +62,7 @@ function Navigationbar() {
                                             {users && users.fullname}
                                         </button>
                                         <ul className="dropdown-menu">
-                                            <li><Link className="dropdown-item">Action</Link></li>
+                                            
                                             <li><Link to="/shopping-app" className="dropdown-item" onClick={HandleDelledaccount}>Delete Account</Link></li>
                                             <li><Link to="/shopping-app" className="dropdown-item" onClick={() => localStorage.removeItem('usertoken')}>Logout</Link></li>
                                         </ul>
