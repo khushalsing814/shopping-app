@@ -7,7 +7,7 @@ function Protected_route(props) {
     const { Cmp } = props;
     useEffect(() => {
         if (!localStorage.getItem('usertoken')) {
-            navigate('/')
+            navigate('/shopping-app')
         }
     })
 

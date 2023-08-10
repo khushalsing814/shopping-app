@@ -54,8 +54,8 @@ function Navigationbar() {
                                             </button>
                                             <ul className="dropdown-menu">
                                                 <li><Link className="dropdown-item">Action</Link></li>
-                                                <li><Link to="" className="dropdown-item" onClick={HandleDelledaccount}>Delete Account</Link></li>
-                                                <li><Link to="" className="dropdown-item" onClick={() => localStorage.removeItem('usertoken')}>Logout</Link></li>
+                                                <li><Link to="/shopping-app" className="dropdown-item" onClick={HandleDelledaccount}>Delete Account</Link></li>
+                                                <li><Link to="/shopping-app" className="dropdown-item" onClick={() => localStorage.removeItem('usertoken')}>Logout</Link></li>
                                             </ul>
                                         </div>
                                     </div>
