@@ -1,13 +1,15 @@
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import React, { useRef, useState } from 'react'
+import React, { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
-import axios, { AxiosError } from 'axios';
+import axios from 'axios';
 import { useEffect } from 'react';
+import { AiFillEye, AiFillEyeInvisible } from "react-icons/ai";
 
 function Login() {
     const navigate = useNavigate();
     const [inputData, setInputdata] = useState({});
+    const [showPassword, setShowPassword] = useState("password");
     useEffect(() => {
         if (localStorage.getItem('usertoken')) {
             navigate('/shopping-app')
@@ -40,6 +42,10 @@ function Login() {
         autoClose: 1000
     });
 
+    const HandleEye = () => {
+        setShowPassword(showPassword === "password" ? "text" : "password")
+    }
+
     const handleSubmit = (e) => {
         e.preventDefault();
         if (!inputData.email || !inputData.password) {
@@ -50,7 +56,7 @@ function Login() {
         else {
             const id = toast.loading("Please wait....", {
                 position: toast.POSITION.TOP_CENTER,
-                autoClose: 1000 
+                autoClose: 1000
             })
             axios.post(`https://reqres.in/api/login`, inputData)
                 .then((res) => {
@@ -90,12 +96,15 @@ function Login() {
             <form className='m-auto center_form form_shadow' onSubmit={handleSubmit} >
                 <h1 className='text-center'>Login</h1>
                 <div className="form-group">
-                    <label htmlFor="email">Email</label>
+                    <label htmlFor="email">Email :</label>
                     <input type="text" className="form-control" id="email" name='email' onChange={handleData}></input>
                 </div>
                 <div className="form-group">
-                    <label htmlFor="password">Password</label>
-                    <input type="text" className="form-control" id="password" name='password' onChange={handleData}></input>
+                    <label htmlFor="password">Password :</label>
+                    <div className='position-relative'>
+                        <input type={showPassword} className="form-control" id="password" name='password' onChange={handleData}></input>
+                        <span className='position-absolute ' style={{ right: "10px", top: "6px", cursor: "pointer" }} onClick={HandleEye}>{showPassword === "password"?<AiFillEyeInvisible />: <AiFillEye/>}</span>
+                    </div>
                 </div>
                 <div className='d-flex justify-content-between mt-3' >
                     <button className="btn btn-primary button_style">Submit</button>

@@ -4,10 +4,12 @@ import React, { useState } from 'react'
 import { Link, json, useNavigate } from 'react-router-dom'
 import axios from 'axios';
 import { useEffect } from 'react';
+import { AiFillEye, AiFillEyeInvisible } from "react-icons/ai";
 
 function Register() {
     const navigate = useNavigate();
     const [inputData, setInputdata] = useState({});
+    const [showPassword, setShowPassword] = useState("password");
     useEffect(() => {
         if (localStorage.getItem('usertoken')) {
             navigate('/shopping-app')
@@ -15,6 +17,10 @@ function Register() {
             navigate('/register')
         }
     }, [])
+
+    const HandleEye = () => {
+        setShowPassword(showPassword === "password" ? "text" : "password")
+    }
 
     const handleData = (e) => {
         const key = e.target.name;
@@ -77,19 +83,22 @@ function Register() {
                 <form className='m-auto center_form form_shadow' onSubmit={handleSubmit} >
                     <h1 className='text-center'>Register</h1>
                     <div className="form-group">
-                        <label htmlFor="fullname">Full Name</label>
+                        <label htmlFor="fullname">Full Name :</label>
                         <input type="text" className="form-control" id="fullname" name='fullname' onChange={handleData}></input>
                     </div>
                     <div className="form-group">
-                        <label htmlFor="email">Email</label>
+                        <label htmlFor="email">Email :</label>
                         <input type="text" className="form-control" id="email" name='email' onChange={handleData}></input>
                     </div>
                     <div className="form-group">
-                        <label htmlFor="password">Password</label>
-                        <input type="text" className="form-control" id="password" name='password' onChange={handleData}></input>
+                    <label htmlFor="password">Password :</label>
+                    <div className='position-relative'>
+                        <input type={showPassword} className="form-control" id="password" name='password' onChange={handleData}></input>
+                        <span className='position-absolute ' style={{ right: "10px", top: "6px", cursor: "pointer" }} onClick={HandleEye}>{showPassword === "password"?<AiFillEyeInvisible />: <AiFillEye/>}</span>
+                    </div>
                     </div>
                     <div className="form-group mt-3 dropend">
-                        <label htmlFor="author">Gender:</label>
+                        <label htmlFor="author">Gender :</label>
                         <div class="form-check form-check-inline ms-3">
                             <input className="form-check-input" type="radio" name="gender" value="male" onChange={handleData}></input>
                             <label className="form-check-label">male</label>
