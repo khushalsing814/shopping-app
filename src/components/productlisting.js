@@ -68,12 +68,17 @@ function Productlisting() {
         }
     }
 
-    if (loading) {
-        return <h2 style={{ textAlign: "center" }}>loading...</h2>
+    const loadingF = () => {
+        if (loading) {
+            return <h1 style={{ textAlign: "center", marginTop:20, marginBottom:20 ,minHeight:150}} >loading...</h1>
+        }
     }
+
+
 
     return (
         <>
+            {loadingF()}
             <ToastContainer />
             <div className='mt-3 mb-3 text-center w-100'>
                 <h1 className='text-center d-block'>Latest Products</h1>
@@ -115,7 +120,7 @@ function Productlisting() {
                                                         <div className='card-image--parent'><img src={items.thumbnail}></img></div>
                                                         <div className="card-header mt-2 mb-2">
                                                             <span className="badge text-bg-info fs-5" style={{ whiteSpace: "wrap" }}> {items.title}</span></div>
-                                               
+
                                                         <ReactReadMoreReadLess charLimit={30} readMoreText={"Read more ▼"} readLessText={"Read less ▲"} >
                                                             {items.description}
                                                         </ReactReadMoreReadLess>
