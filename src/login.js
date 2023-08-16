@@ -12,7 +12,7 @@ function Login() {
     const [showPassword, setShowPassword] = useState("password");
     useEffect(() => {
         if (localStorage.getItem('usertoken')) {
-            navigate('/shopping-app')
+            navigate('/shopping-app/')
         } else {
             navigate('/login')
         }
@@ -64,7 +64,7 @@ function Login() {
                         localStorage.setItem("usertoken", res?.data?.token)
                         toast.update(id, { render: "Login Successfully", type: "success", isLoading: false, position: toast.POSITION.TOP_CENTER, autoClose: 1000 });
                         setTimeout(() => {
-                            navigate('/shopping-app')
+                            navigate('/shopping-app/')
                         }, 2000);
                     } else {
                         wrongApi();
@@ -108,7 +108,7 @@ function Login() {
                 </div>
                 <div className='d-flex justify-content-between mt-3' >
                     <button className="btn btn-primary button_style">Submit</button>
-                    <Link to="/shopping-app" type="submit" className="btn btn-warning button_style_2">Back</Link>
+                    <Link to="/shopping-app/" type="submit" className="btn btn-warning button_style_2">Back</Link>
                 </div>
             </form>
         </>

@@ -91,7 +91,7 @@ function Addcart() {
                             <p>Total Amount</p>
                             <p>{`₹ ${totalprice}`}</p>
                         </div>
-                        <button className='btn btn-primary w-100' onClick={() => navigate('/shopping-app')}>Go to Dashboard</button>
+                        <button className='btn btn-primary w-100' onClick={() => navigate('/shopping-app/')}>Go to Dashboard</button>
                     </div>
                 </div>
             </div>
