@@ -1,18 +1,18 @@
 {
   "files": {
     "main.css": "/shopping-app/static/css/main.dce58bae.css",
-    "main.js": "/shopping-app/static/js/main.170f158f.js",
+    "main.js": "/shopping-app/static/js/main.5ebbe2c5.js",
     "static/js/787.6962f9d7.chunk.js": "/shopping-app/static/js/787.6962f9d7.chunk.js",
     "static/media/revicons.eot": "/shopping-app/static/media/revicons.a77de540a38981833f9e.eot",
     "static/media/revicons.ttf": "/shopping-app/static/media/revicons.57fd05d4ae650374c8de.ttf",
     "static/media/revicons.woff": "/shopping-app/static/media/revicons.e8746a624ed098489406.woff",
     "index.html": "/shopping-app/index.html",
     "main.dce58bae.css.map": "/shopping-app/static/css/main.dce58bae.css.map",
-    "main.170f158f.js.map": "/shopping-app/static/js/main.170f158f.js.map",
+    "main.5ebbe2c5.js.map": "/shopping-app/static/js/main.5ebbe2c5.js.map",
     "787.6962f9d7.chunk.js.map": "/shopping-app/static/js/787.6962f9d7.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.dce58bae.css",
-    "static/js/main.170f158f.js"
+    "static/js/main.5ebbe2c5.js"
   ]
 }
