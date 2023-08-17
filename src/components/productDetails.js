@@ -6,8 +6,9 @@ import {useLocation, useParams } from 'react-router-dom';
 import SimpleImageSlider from "react-simple-image-slider";
 
 function ProductDetails() {
-    const location = useLocation();
-    const id = location.state.userid;
+    // const location = useLocation();
+    // const id = location.state.userid;
+   const {id} = useParams()
     console.log(id)
     const [productdetails, setProducts] = useState([]);
     const [images, setImages] = useState([]);

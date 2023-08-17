@@ -110,7 +110,7 @@ function Register() {
                     </div>
                     <div className='d-flex justify-content-between mt-3' >
                         <button className="btn btn-primary  button_style">Submit</button>
-                        <Link to="/shopping-app/" type="submit" className="btn btn-warning button_style_2 ">Back</Link>
+                        <Link to="/" type="submit" className="btn btn-warning button_style_2 ">Back</Link>
                     </div>
                 </form>
             </div>

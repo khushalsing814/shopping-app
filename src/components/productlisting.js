@@ -3,7 +3,7 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { useSelector, useDispatch } from 'react-redux';
 import { addtocart, apifetch } from './reduxToolkit/apislice';
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import ReactReadMoreReadLess from "react-read-more-read-less";
@@ -53,28 +53,31 @@ function Productlisting() {
             // buttons.forEach(btn => btn.classList.add('active'));
         });
     });
-
     const toastwarning = () => toast.error("please!! kindly login your account", {
         position: toast.POSITION.TOP_CENTER,
         autoClose: 1000
     });
 
-    const Handledata = (id) => {
-        if (!localStorage.getItem(`usertoken`)) {
+    // const Handledata = (id) => {
+    //     if (!localStorage.getItem(`usertoken`)) {
+    //         toastwarning();
+    //         navigate('/shopping-app/')
+    //     } else {
+    //         navigate('/ProductDetails', { state: { userid: id } })
+    //     }
+    // }
+
+    const HandleLink =(id)=>{
+        if(!localStorage.getItem('usertoken')){
             toastwarning();
-            navigate('/shopping-app/')
-        } else {
-            navigate('/ProductDetails', { state: { userid: id } })
         }
     }
 
     const loadingF = () => {
         if (loading) {
-            return <h1 style={{ textAlign: "center", marginTop:20, marginBottom:20 ,minHeight:150}} >loading...</h1>
+            return <h1 style={{ textAlign: "center", marginTop: 20, marginBottom: 20, minHeight: 150 }} >loading...</h1>
         }
     }
-
-
 
     return (
         <>
@@ -116,7 +119,7 @@ function Productlisting() {
                                         return (
                                             <div key={items.id} className='card_width'>
                                                 <div className='card_shadow'>
-                                                    <button className="setcolor" style={{ border: 0 }} onClick={() => Handledata(items.id)}>
+                                                    <Link to={localStorage.getItem(`usertoken`) && `/productDetails/${items.id}`} className="setcolor" style={{ border: 0 }} onClick={()=>HandleLink(items.id)}>
                                                         <div className='card-image--parent'><img src={items.thumbnail}></img></div>
                                                         <div className="card-header mt-2 mb-2">
                                                             <span className="badge text-bg-info fs-5" style={{ whiteSpace: "wrap" }}> {items.title}</span></div>
@@ -127,7 +130,7 @@ function Productlisting() {
 
 
                                                         {/* <div className="card-desc">{items.description}</div> */}
-                                                    </button>
+                                                    </Link>
                                                     <span className='position-relative'>
                                                         <button onClick={() => localStorage.getItem(`usertoken`) && dispatch(addtocart(items))} className="btn btn-outline-primary w-100 mt-2">Add to Cart</button>
                                                     </span>
