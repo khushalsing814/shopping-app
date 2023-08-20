@@ -26,7 +26,7 @@ function App() {
           <Route exact path='/addcart' element={<Protected_route Cmp={Addcart}/>}></Route>
           <Route  path='/register' element={<Register />}></Route>
           <Route  path='/login' element={<Login />}></Route>
-          <Route path='/productDetails/:id' element={<ProductDetails />}></Route>
+          <Route path='/productDetails/:id' element={<ProductDetails/>}></Route>
           <Route path='/addtocart/:id' element={<Addcart/>}></Route>
           <Route path='*' element={<FourZeroFour />}></Route>
         </Routes>

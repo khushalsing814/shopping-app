@@ -1,6 +1,6 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react'
-import {useLocation, useParams } from 'react-router-dom';
+import {Navigate, useLocation, useNavigate, useParams } from 'react-router-dom';
 // import 'react-multi-carousel/lib/styles.css';
 // import Carousel from 'react-multi-carousel';
 import SimpleImageSlider from "react-simple-image-slider";
@@ -8,10 +8,19 @@ import SimpleImageSlider from "react-simple-image-slider";
 function ProductDetails() {
     // const location = useLocation();
     // const id = location.state.userid;
-   const {id} = useParams()
+   const {id} = useParams();
+   const navigate = useNavigate();
     console.log(id)
     const [productdetails, setProducts] = useState([]);
     const [images, setImages] = useState([]);
+
+    // useEffect(() => {
+    //     if (localStorage.getItem('usertoken')) {
+    //         Navigate('/productDetails')
+    //     } else {
+    //         navigate('/')
+    //     }
+    // }, [])
     
     const fetchProductDetails = async () => {
         try {
