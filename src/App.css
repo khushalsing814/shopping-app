@@ -42,7 +42,8 @@ span.react-read-more-read-less.react-read-more-read-less-less {
 .add--scrollbar{
 overflow: auto;
 padding: 34px !important;
-max-height: 100vh;
+max-height: 60vh;
+margin-top: 40px !important;
 }
 
 .center_form{
@@ -179,6 +180,11 @@ color:black;
 @media (max-width: 768px){
   .react-multi-carousel-item {
     margin-right: 46px;
+}
+.dashboard{
+  margin-top: 20px !important;
+  margin-bottom: 250px !important;
+
 }
 }
 @media (max-width: 465px){

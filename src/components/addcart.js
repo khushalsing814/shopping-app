@@ -65,7 +65,7 @@ function Addcart() {
                                         <div className='col-12 col-md-3'>
                                             <div className='form_shadow'>
                                                 {/* <h1 style={{ display: "block", textAlign: "center" }}>Counter</h1> */}
-                                                <div className='d-flex justify-content-around'>
+                                                <div className='d-flex flex-wrap justify-content-around'>
                                                     <button className={items.quantity >= 0 && 'btn btn-success'} onClick={()=>Handleincrement(items)}>+</button>
                                                     <div className='text-center'>
                                                         <div>Quantity</div> 
