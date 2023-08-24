@@ -41,12 +41,12 @@ function ProductDetails() {
             <div key={productdetails.id} className='col-12' style={{marginTop:90}}>
                 <div className='card_shadow'>
                     <div className='row'>
-                        <div className='col-12 col-sm-3'>
+                        <div className='col-12 col-xl-3'>
                             <div className='image__parent'>
                                 <SimpleImageSlider
-                                    width={350}
+                                    width={312}
                                     height={350}
-                                    Maxwidth={350}
+                                    Maxwidth={312}
                                     Maxheight={350}
                                     images={images}
                                     showBullets={true}
@@ -54,7 +54,7 @@ function ProductDetails() {
                                 />
                             </div>
                         </div>
-                        <div className='col-12 col-sm-9'>
+                        <div className='col-12 col-xl-9'>
                             <div>{productdetails.brand}</div>
                             <div>{productdetails.title}</div>
                             <div>{productdetails.description}</div>
