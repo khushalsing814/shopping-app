@@ -70,7 +70,7 @@ nav.navbar{
 
 header.background_image_header{
 position: relative;
-min-height: 100vh;
+/* min-height: 100vh; */
 }
 
 .header_text{
@@ -184,7 +184,9 @@ color:black;
 .dashboard{
   margin-top: 20px !important;
   margin-bottom: 250px !important;
-
+}
+.parent_image {
+  margin-top: 80px !important;
 }
 }
 @media (max-width: 465px){
