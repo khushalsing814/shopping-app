@@ -85,7 +85,7 @@ function Productlisting() {
             <ToastContainer />
             <div className='mt-3 mb-3 text-center w-100'>
                 <h1 className='text-center d-block'>Latest Products</h1>
-                <ul className="d-flex justify-content-center">
+                <ul className="d-flex justify-content-center p-0">
                     <li className="nav-item me-2 btnstyle active position-relative">
                         <a className="nav-link" aria-current="page" name="all" onClick={handlefilter}>All</a>
                     </li>

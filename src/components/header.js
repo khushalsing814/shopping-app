@@ -4,7 +4,7 @@ function Header() {
     return (
         <>
             <header className='background_image_header'>
-                <div className='container parent_image p-0'>
+                <div className='container-max-width parent_image p-0'>
                     {/* <img src='https://reactjs-ecommerce-app.vercel.app/assets/main.png.jpg'></img> */}
                     <video loop muted autoPlay="autoplay" style={{height:"100%" ,width:"100%"}}>
                         <source src="./video/womanvideo.mp4" type="video/mp4"/>
