@@ -8,6 +8,7 @@
 
 body{
   background-color:#eff0f0 !important ;
+  overflow-x: hidden !important;
 }
 span.react-read-more-read-less.react-read-more-read-less-more {
   color: green;
