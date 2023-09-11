@@ -211,6 +211,9 @@ color:black;
     width: auto;
     margin-right: 24px;
   }
+  .loading_mobile{
+    min-height: 0px !important;
+  }
 }
 @media (max-width: 390px){
   .button_style{

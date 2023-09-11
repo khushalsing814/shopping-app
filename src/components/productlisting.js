@@ -73,16 +73,11 @@ function Productlisting() {
         }
     }
 
-    const loadingF = () => {
-        if (loading) {
-            return <h1 style={{ textAlign: "center", marginTop: 20, marginBottom: 20, minHeight: 150 }} >loading...</h1>
-        }
-    }
-
     return (
         <>
-            {loadingF()}
             <ToastContainer />
+            {loading ?  <h1 className="loading_mobile" style={{ textAlign: "center", marginTop: 20, marginBottom: 20, minHeight: 150 }} >loading...</h1>
+            :
             <div className='mt-3 mb-3 text-center w-100'>
                 <h1 className='text-center d-block'>Latest Products</h1>
                 <ul className="d-flex justify-content-center p-0">
@@ -100,6 +95,7 @@ function Productlisting() {
                     </li>
                 </ul>
             </div>
+            } 
             <div className='container parent-react-multi-carousel-list '>
                 <div className='row'>
                     {
@@ -143,6 +139,7 @@ function Productlisting() {
                     }
                 </div>
             </div>
+            
         </>
     )
 }
