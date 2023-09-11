@@ -97,7 +97,7 @@ function Register() {
                         <span className='position-absolute ' style={{ right: "10px", top: "6px", cursor: "pointer" }} onClick={HandleEye}>{showPassword === "password"?<AiFillEyeInvisible />: <AiFillEye/>}</span>
                     </div>
                     </div>
-                    <div className="form-group mt-3 dropend">
+                    <div className="form-group mt-3 dropend" style={{whiteSpace:"nowrap"}}>
                         <label htmlFor="author">Gender :</label>
                         <div class="form-check form-check-inline ms-3">
                             <input className="form-check-input" type="radio" name="gender" value="male" onChange={handleData}></input>
