@@ -76,7 +76,7 @@ function Productlisting() {
     return (
         <>
             <ToastContainer />
-            {loading ?  <h1 className="loading_mobile" style={{ textAlign: "center", marginTop: 20, marginBottom: 20, minHeight: 150 }} >loading...</h1>
+            {loading ?  <h1 className="loading_mobile" style={{ textAlign: "center", marginTop: 20, marginBottom: 20, minHeight: 350 }} >loading...</h1>
             :
             <div className='mt-3 mb-3 text-center w-100'>
                 <h1 className='text-center d-block'>Latest Products</h1>
